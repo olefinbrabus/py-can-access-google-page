@@ -2,7 +2,7 @@ import pytest
 from unittest.mock import patch, MagicMock
 
 
-from app.main import can_access_google_page
+from app import main
 
 
 @patch("app.main.valid_google_url")
@@ -26,4 +26,4 @@ def test_have_access_google_page(
     mocked_internet_connection.return_value = connection
     mocked_google.return_value = google
 
-    assert can_access_google_page("https://www.google.com") == result
+    assert main.can_access_google_page("https://www.google.com") == result
