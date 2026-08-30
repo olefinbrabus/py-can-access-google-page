@@ -17,8 +17,8 @@ from app import main
     ]
 )
 def test_can_access_google_page(
-        mocked_google: MagicMock,
         mocked_internet_connection: MagicMock,
+        mocked_google: MagicMock,
         connection: bool,
         google: bool,
         result: str
